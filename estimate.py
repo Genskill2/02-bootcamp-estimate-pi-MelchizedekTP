@@ -2,7 +2,9 @@ import math
 import unittest
 
 def wallis(int i):
-    return 3.147
+    for j in range(i):
+	p*=(4*(j+1)**2)/(4*(j+1)**2-1)
+    return p/2
 
 class TestWallis(unittest.TestCase):
     def test_low_iters(self):
