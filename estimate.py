@@ -13,9 +13,9 @@ def monte_carlo(n):
     for i in range(n):
         x=random.random()
         y=random.random()
-        d=math.root(x**2+y**2)
-        if d<=1:
-            c++
+        d=math.sqrt(x**2+y**2)
+        if d<1:
+            c+=1
     return 4*c/n
     
 class TestWallis(unittest.TestCase):
