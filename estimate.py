@@ -6,7 +6,7 @@ def wallis(i):
     p=1
     for j in range(i):
         p*=(4*(j+1)**2)/(4*(j+1)**2-1)
-    return p/2
+    return p*2
 
 def monte_carlo(n):
     c=0
