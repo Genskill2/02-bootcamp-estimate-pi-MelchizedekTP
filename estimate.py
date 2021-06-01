@@ -1,11 +1,23 @@
 import math
 import unittest
+import random
 
-def wallis(int i):
+def wallis(i):
+    p=1
     for j in range(i):
-	p*=(4*(j+1)**2)/(4*(j+1)**2-1)
+        p*=(4*(j+1)**2)/(4*(j+1)**2-1)
     return p/2
 
+def monte_carlo(n):
+    c=0
+    for i in range(n):
+        x=random.random()
+        y=random.random()
+        d=math.root(x**2+y**2)
+        if d<=1:
+            c++
+    return 4*c/n
+    
 class TestWallis(unittest.TestCase):
     def test_low_iters(self):
         for i in range(0, 5):
